@@ -1,7 +1,7 @@
 ---
 title: Customer support
 publishDate: 2023-92-14 00:00:00
-img: /assets/stock-2.jpg
+img: /assets/customer-support.jpg
 img_alt: Image from Arlington Research - a typical technical support environment
 description: |
   Step by step guide to becoming a modern frontend developer in 2023
