@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Paul Wasicsek" description="About Paul Wasicsek, Technical lead customer Support">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/keep-going.jpg"
+					alt="Me at the ATOSS office in Timisoara"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						Professionally, I handle and answer complex inquiries related to the <a href="https://www.atoss.com/en/solutions">ATOSS Software</a> ASES application and the related environment. 
+						Handling and analyzing application errors, assisting in interfaces issues with third party applications, debugging terminal communication for clocking or access devices and answering question related to the application usage or functionality are the main technical challenges I deal with on a daily basis.
+				<br />	
+				In addition, as <i>Team Leader Hotline - Consulting, Services and Support</i>, I am involved in leading and hopefully inspiring a diverse, dedicated and highly competent customer support team to successfully resolve customer inquiries and maintain the best customer satisfaction.
+					</p>
+				
+					<p>
+						As an individual I have always been passionate about exact sciences (mathematics and physics) and I studied computer science since 9th grade on the first computers available in Romania (<a href="https://en.wikipedia.org/wiki/ZX_Spectrum">Sinclair ZX Spectrum</a>, <a href="https://en.wikipedia.org/wiki/Atari_8-bit_family">Atari 800XL</a>, <a href="https://ro.wikipedia.org/wiki/Prae">Prae</a> and  <a href="https://ro.wikipedia.org/wiki/TIM-S">Tim-S</a>). 
+					</p>
+					<p>
+						In summary, my heart beats for developing and supporting technology-based products that have a positive impact on people, and for developing and mentoring outstanding teams to achieve this.
+					</p>
+				</div>
+			</section>
+			<!--
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>Corporis voluptates tenetur laudantium.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>officia unde omnis</p>
+				</div>
+			</section>
+			-->
+		</main>
+
+		<!--
+		<ContactCTA />
+		-->
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
